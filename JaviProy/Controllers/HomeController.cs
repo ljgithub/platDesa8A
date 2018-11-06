@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JaviProy.Models;
 
 namespace JaviProy.Controllers
 {
@@ -18,11 +19,15 @@ namespace JaviProy.Controllers
 		{
 			return View();
 		}
-
-
 	
 		public ActionResult CargarDatos()
 		{
+			string nombre = Request.Form["nombre"].ToString();
+			string comentarios= Request.Form["comentarios"].ToString();
+
+
+			LibroVisitas l = new LibroVisitas();
+			l.grabar(nombre, comentarios);
 			return View();
 		}				
     }
