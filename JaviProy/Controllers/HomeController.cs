@@ -19,9 +19,11 @@ namespace JaviProy.Controllers
 			return View();
 		}
 
+
+	
 		public ActionResult CargarDatos()
 		{
 			return View();
-		}
+		}				
     }
 }
